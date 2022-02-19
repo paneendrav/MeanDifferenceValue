@@ -1,0 +1,25 @@
+
+
+// for calculating mean/average value for list of values
+
+long Mean_difference_of_values(int Argvalue) 
+{
+  #define no_of_values_to_take 35
+
+  static int list_of_values[no_of_values_to_take];      // LastMeasurements
+  static byte i = 0;
+  static long tot = 0;
+  static byte cnt = 0;
+  long average = 0;
+
+  // keep sum updated to improve speed.
+  tot -= list_of_values[i];
+  list_of_values[i] = Argvalue;
+  tot  += list_of_values[i];
+  i++;
+  i = i % no_of_values_to_take ;
+  if (cnt < no_of_values_to_take cnt++;
+
+  average = tot / cnt;
+  return average - Argvalue;
+}
